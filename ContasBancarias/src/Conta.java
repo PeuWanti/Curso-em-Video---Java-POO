@@ -2,7 +2,7 @@ public class Conta {
     private String titular, tipoConta;
     private double saldo, mensalidade;
 
-    public Conta(String titular, String tipoConta) {
+    public Conta(String titular, String tipoConta, double saldo) {
         this.titular = titular;
         this.tipoConta = tipoConta;
         this.saldo = saldo;
@@ -62,7 +62,7 @@ public class Conta {
             System.out.println("Saldo insuficiente");
         } else {
             setSaldo(getSaldo() - valor);
-            System.out.printf("Deposito: %.2f%n seu saldo agora é de %.2f%n", valor, getSaldo());
+            System.out.printf("Saque: %.2f%n seu saldo agora é de %.2f%n", valor, getSaldo());
         }
     }
 }
